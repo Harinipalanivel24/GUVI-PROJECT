@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to MyApp — Register or Login to continue.">
+    <title>MyApp — Welcome</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="landing-container">
+        <div class="landing-card">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+            </div>
+            <h1>MyApp</h1>
+            <p>A simple and secure platform. Create an account or log in to manage your profile.</p>
+
+            <div class="landing-buttons">
+                <a href="register.html" class="btn btn-primary-custom" id="btnGetStarted">
+                    <i class="bi bi-person-plus"></i> Get Started
+                </a>
+                <a href="login.html" class="btn-secondary-custom" id="btnLoginLink">
+                    <i class="bi bi-box-arrow-in-right"></i> I already have an account
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            if (localStorage.getItem('auth_token')) {
+                window.location.href = 'profile.html';
+            }
+        });
+    </script>
+</body>
+</html>
